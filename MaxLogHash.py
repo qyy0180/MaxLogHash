@@ -37,8 +37,8 @@ def MaxLog(seed):
             maxShingleID [item[0]][0]= max_hash_val_list
             maxShingleID [item[0]][1]= max_hash_sig_list
         else:
-            max_hash_val_list = [0] * k
-            max_hash_sig_list = [1] * k
+            max_hash_val_list = [-1] * k
+            max_hash_sig_list = [0] * k
             max_hash_res_new = []
             max_hash_res_new.append(max_hash_val_list)
             max_hash_res_new.append(max_hash_sig_list)
