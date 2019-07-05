@@ -24,11 +24,8 @@ def MaxLog(seed):
             for x  in range(0, k):
                 temp = ((randomNoA[x] * mmh3.hash(str(item[1]),seed) + randomNoB[x]) % totalShingles)
                 temp = temp / float(totalShingles)
-                if temp != 0:
-                   log_temp = - math.log(temp,2)
-                   hash_val =  math.ceil(log_temp)
-                elif temp == 0 :
-                    hash_val = sys.getsizeof(temp)
+                log_temp = - math.log(temp,2)
+                hash_val =  math.ceil(log_temp)
                 if hash_val > max_hash_val_list[x]:
                    max_hash_val_list[x] = hash_val
                    max_hash_sig_list[x] = 1
